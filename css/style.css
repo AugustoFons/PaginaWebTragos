@@ -1,0 +1,47 @@
+/* *************** ESTILOS GENERALES ***************  */
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* *************** BODY ***************  */
+body {
+  background: rgb(201, 219, 219);
+  width: 100%;
+  height: 100px;
+}
+
+/* *************** HEADER ***************  */
+.header {
+  background: yellow;
+  width: 100%;
+  height: 100px;
+}
+
+/* *************** NAVEGADOR ***************  */
+.nav {
+  background: blue;
+  width: 100%;
+  height: 100px;
+}
+
+/* *************** MAIN ***************  */
+.main {
+  background: red;
+  width: 100%;
+  height: calc(100vh - 200px);
+}
+
+/* *************** FORMULARIO ***************  */
+.form {
+  background: rgb(227, 6, 235);
+  width: 100%;
+  height: 100px;
+}
+
+/* *************** FOOTER ***************  */
+.footer {
+  background: green;
+  width: 100%;
+  height: 100px;
+}
