@@ -9,13 +9,48 @@
   </head>
   <body>
     <header class="header">
-      ESTE ES EL TITULO PRINCIPAL Y LOGO DEL SITIO WEB
+      <div class="container">
+          <div class="menu-buscador-logo">
+
+                  <img class="logo" src="./img/logo.png" alt="">
+          <div class="menu-buscador">
+              <label for="btn-menu">☰</label>
+              <input class="buscador" type="search" placeholder="busca tu trago favorito...">
+          </div>
+      </div>
+        <nav class="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </div>
     </header>
-    <nav class="nav">AQUI VA EL MENU</nav>
+
+    <nav>
+      <input type="checkbox" id="btn-menu">
+      <div class="container-menu">
+        <ul class="categorias">
+            <li><a href="#">Recomendados</a></li>
+            <li><a href="#">Premiados</a></li>
+            <li><a href="#">Tragos de autor</a></li>
+            <li><a href="#">Tragos clasicos</a></li>
+            <li><a href="#">Los más buscados</a></li>
+            <li><a href="#">Los más votados</a></li>
+          <label for="btn-menu">✖️</label>
+        </ul>
+      </div>
+    </nav>
+
     <main class="main">CUERPO PRINCIPAL DE LA PAGINA WEB</main>
     <section class="form">
       <form action="">FORMULARIO - VERIFICAR SI QUEDA MEJOR EN EL FOOTER</form>
     </section>
-    <footer class="footer">PIE DE PAGINA</footer>
+    <footer class="footer">
+      <div class="textFooter">
+        <p>© 2022 tragosona.com</p>
+        <p>Autores: Oscar Lopez, Nicolas Molina, Augusto Fons</p>
+        <p>Proyecto Codo a Codo 2022</p>
+      </div>
+    </footer>
   </body>
 </html>
