@@ -171,9 +171,69 @@ li {
 
 /* *************** MAIN ***************  */
 .main {
-  background: red;
+  background: #000;
   width: 100%;
-  height: calc(100vh - 200px);
+  display: flex;
+  max-width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin: 50px auto 0;
+  animation: slide 16s infinite alternate ease-in-out;
+  
+}
+
+
+.banner ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+
+}
+
+.banner li {
+  list-style: none;
+  width: 100%;
+  height: auto;
+  margin: 0 200px 50px;
+}
+
+banner img {
+  max-width: 100%;
+
+}
+
+
+@keyframes slide {
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}  
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}  
+  100% {margin-left: -300%;}
+}
+
+#upBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  width: 50px;
+  
+}
+
+.remove-bg {
+  filter: brightness(0.2);
+  mix-blend-mode: screen;
+  border-radius: 50%;
+
+
 }
 
 /* *************** FORMULARIO ***************  */
