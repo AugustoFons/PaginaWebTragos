@@ -171,9 +171,100 @@ li {
 
 /* *************** MAIN ***************  */
 .main {
-  background: red;
+  background: #000;
   width: 100%;
-  height: calc(100vh - 200px);
+  display: flex;
+  max-width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin: 50px auto 0;
+  animation: slide 16s infinite alternate ease-in-out;
+  
+}
+
+
+.banner ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+
+}
+
+.banner li {
+  list-style: none;
+  width: 100%;
+  height: auto;
+  margin: 0 200px 50px;
+}
+
+banner img {
+  max-width: 100%;
+
+}
+
+.description_banner {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 1038px;
+  right: 300px;
+  left: 300px;
+}
+
+.tit_main {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.text_main {
+ color: #000;
+ text-align: center;
+ font-size: 25px;
+}
+
+@keyframes slide {
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}  
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}  
+  100% {margin-left: -300%;}
+}
+
+#upBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  
+}
+
+/* .to-top-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.3;
+  background-image: linear-gradient(rgb(78, 112, 215), rgb(23, 107, 243));
+  transform: translateX(120px);
+  transition: all 1s ease;
+} */
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+
 }
 
 /* *************** FORMULARIO ***************  */
