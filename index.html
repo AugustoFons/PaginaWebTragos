@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="menu-buscador-logo">
+          <img class="logo" src="./img/logo.png" alt="" />
+          <div class="menu-buscador">
+            <label for="btn-menu">☰</label>
+            <input
+              class="buscador"
+              type="search"
+              placeholder="busca tu trago favorito..."
+            />
+          </div>
+        </div>
+        <nav class="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Document</title>
-</head>
-
-<body>
-  <header class="header">
-    ESTE ES EL TITULO PRINCIPAL Y LOGO DEL SITIO WEB
-  </header>
-  <nav id="nav" class="nav">AQUI VA EL MENU</nav>
+    <nav>
+      <input type="checkbox" id="btn-menu" />
+      <div class="container-menu">
+        <ul class="categorias">
+          <li><a href="#">Recomendados</a></li>
+          <li><a href="#">Premiados</a></li>
+          <li><a href="#">Tragos de autor</a></li>
+          <li><a href="#">Tragos clasicos</a></li>
+          <li><a href="#">Los más buscados</a></li>
+          <li><a href="#">Los más votados</a></li>
+          <label for="btn-menu">✖️</label>
+        </ul>
+      </div>
+    </nav>
   <main class="main">
     <div class="description_banner">
       <h2 class="title_main">Titulo</h2>
@@ -30,9 +65,86 @@
   </main>
   <a href="#nav"><img src="/img/arriba.png" id="upBtn" alt="ir arriba"></a>
   <section class="form">
-    <form action="">FORMULARIO - VERIFICAR SI QUEDA MEJOR EN EL FOOTER</form>
-  </section>
-  <footer class="footer">PIE DE PAGINA</footer>
-</body>
+      <h3 class="tituloFormulario">Contactenos desde el formulario</h3>
+      <div class="container">
+        <div class="row g-3">
+          <!-- g-3 Genera Espacio -->
+          <form action="" class="row g-3">
+            <div class="col-12">
+              <label for="tituloInput">Titulo</label>
+              <input
+                type="text"
+                name="text"
+                id="tituloInput"
+                class="form-control"
+                placeholder="Ingrese un Titulo"
+              />
+            </div>
+
+            <div class="col-6">
+              <label for="emailInput">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="emailInput"
+                class="form-control"
+                placeholder="Ingresa tu Email"
+              />
+            </div>
+
+            <div class="col-6">
+              <label for="telefonoInput">Numero de Telefono</label>
+              <input
+                type="text"
+                name="telefono"
+                id="telefonoInput"
+                class="form-control"
+                placeholder="Ingrese numnero de telefono"
+              />
+            </div>
+
+            <div class="col-12 g-3">
+              <textarea
+                name="texto"
+                id="textoInput"
+                cols="30"
+                rows="10"
+                class="form-control"
+                placeholder="Ingrese su comentario"
+              ></textarea>
+              <label for="textoInput"></label>
+            </div>
+
+            <div class="d-grid g-3">
+              <button class="btn btn-primary" type="button">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="textFooter">
+        <p>© 2022 tragosona.com</p>
+        <p>Autores: Oscar Lopez, Nicolas Molina, Augusto Fons</p>
+        <p>Proyecto Codo a Codo 2022</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 
 </html>
