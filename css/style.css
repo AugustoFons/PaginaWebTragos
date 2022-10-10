@@ -190,7 +190,6 @@ li {
   display: flex;
   padding: 0;
   width: 400%;
-
 }
 
 .banner li {
@@ -202,9 +201,28 @@ li {
 
 banner img {
   max-width: 100%;
-
 }
 
+.description_banner {
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 900px;
+  right: 300px;
+  left: 300px;
+}
+
+.title_main {
+  
+  color: #000;
+  text-align: center;
+  font-size: 30px; 
+}
+
+.text_main {
+ color: #000;
+ text-align: center;
+ font-size: 25px;
+}
 
 @keyframes slide {
   0% {margin-left: 0%;}
@@ -223,18 +241,38 @@ banner img {
 #upBtn {
   position: fixed;
   bottom: 20px;
-  right: 40px;
-  width: 50px;
+  right: 20px;
+  width: 70px;
+  height: auto;
+}
+
+.subtitle {
+  color:white;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+.about {
+  letter-spacing: 2px;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  padding-top: 40px;
+  }
+
+
+.about p {
+  margin: auto;
+  color: #fff;
+  padding: 50px;
+  font-size: 24px;
+  width: 400px;
+  height: auto;
   
 }
 
-.remove-bg {
-  filter: brightness(0.2);
-  mix-blend-mode: screen;
-  border-radius: 50%;
-
-
-}
 
 /* *************** FORMULARIO ***************  */
 .form {
