@@ -175,6 +175,7 @@ li {
   width: 100%;
   display: flex;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .banner {
@@ -199,7 +200,7 @@ li {
   margin: 0 200px 50px;
 }
 
-banner img {
+.banner img {
   max-width: 100%;
 }
 
