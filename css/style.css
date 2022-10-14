@@ -180,8 +180,9 @@ li {
   background: #000;
   width: 100%;
   display: flex;
-  max-width: 100%;
+  min-width: 100%;
   overflow: hidden;
+
 }
 
 .banner {
@@ -192,7 +193,7 @@ li {
   
 }
 
-.banner ul {
+.banner .image {
   display: flex;
   width: 400%;
 }
@@ -205,7 +206,7 @@ li {
 }
 
 .banner img {
-  max-width: 100%;
+  min-width: 100%;
 }
 
 .description_banner {
@@ -343,8 +344,6 @@ li {
             transform: translateX(-6px) rotate(-1.2deg);
   }
 }
-
-
 
 /* *************** FORMULARIO ***************  */
 .form {
