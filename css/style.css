@@ -248,37 +248,15 @@ li {
   height: auto;
 }
 
-.subBox {
-  width: 20%;
-  height: max-content;
-  border-bottom: 4px solid rgb(255, 255, 255);
-  margin-left: 50px;
-	animation: scale-up-hor-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-/* animacion subtitle */
-
 @keyframes scale-up-hor-left {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-      
-  }
+
 }
 
 .subtitle {
   color:white;
   font-size: 62px;
+  padding: 20px;
   text-align: center;
-  width: max-content;
   height: auto;
   background-color: #000;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -286,11 +264,19 @@ li {
 
 @keyframes text-focus-in {
   0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+-webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
     -webkit-filter: blur(12px);
             filter: blur(12px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+-webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
     -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1;
@@ -304,13 +290,14 @@ li {
   background-color: #000;
   text-align: center;
   padding-top: 40px;
+  text-align: center;
   }
 
 
 .about p {
   margin: auto;
   color: #fff;
-  padding: 50px;
+  padding: 20px;
   font-size: 24px;
   width: 100%;
   height: auto;
@@ -319,8 +306,44 @@ li {
 .about h3{
   font-size: 40px;
   color: white;
-  padding: 20px;
+  padding: 20px 20px 60px 20px;
 }
+
+.about h3 img {
+  margin: 40px;
+  animation: wobble-hor-bottom 1.5s infinite both;
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
 
 
 /* *************** FORMULARIO ***************  */
