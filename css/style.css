@@ -8,28 +8,33 @@
 body {
   background: rgb(201, 219, 219);
   width: 100%;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 /* *************** HEADER ***************  */
 .header {
   width: 100%;
   height: 120px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10;
 }
-.container {
+.containerCss {
   max-width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
-.container .menu-buscador-logo {
+.containerCss .menu-buscador-logo {
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.container .menu-buscador-logo label {
+.containerCss .menu-buscador-logo label {
   color: #fff;
   font-size: 25px;
   margin-left: 40px;
@@ -46,7 +51,7 @@ body {
   align-items: center;
   column-gap: 10px;
 }
-.container .menu a {
+.containerCss .menu a {
   padding: 15px;
   text-decoration: none;
   color: #fff;
@@ -54,7 +59,7 @@ body {
   font-size: 15px;
   margin-right: 5px;
 }
-.container .menu a:hover {
+.containerCss .menu a:hover {
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5px;
 }
@@ -116,6 +121,7 @@ input.buscador:focus {
   color: white;
   font-size: 20px;
   transition: all 400ms ease;
+  
 }
 
 li {
@@ -181,15 +187,13 @@ li {
 .banner {
   width: 100%;
   height: auto;
-  margin: 50px auto 0;
+  margin-top: 120px;
   animation: slide 16s infinite alternate ease-in-out;
   
 }
 
-
 .banner ul {
   display: flex;
-  padding: 0;
   width: 400%;
 }
 
@@ -197,7 +201,7 @@ li {
   list-style: none;
   width: 100%;
   height: auto;
-  margin: 0 200px 50px;
+  list-style: none;
 }
 
 .banner img {
@@ -206,10 +210,7 @@ li {
 
 .description_banner {
   background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  top: 900px;
-  right: 300px;
-  left: 300px;
+
 }
 
 .title_main {
@@ -247,13 +248,55 @@ li {
   height: auto;
 }
 
+.subBox {
+  width: 20%;
+  height: max-content;
+  border-bottom: 4px solid rgb(255, 255, 255);
+  margin-left: 50px;
+	animation: scale-up-hor-left 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* animacion subtitle */
+
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+      
+  }
+}
+
 .subtitle {
   color:white;
+  font-size: 62px;
   text-align: center;
-  width: 100%;
+  width: max-content;
   height: auto;
   background-color: #000;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 
 .about {
   letter-spacing: 2px;
@@ -269,9 +312,14 @@ li {
   color: #fff;
   padding: 50px;
   font-size: 24px;
-  width: 400px;
+  width: 100%;
   height: auto;
-  
+}
+
+.about h3{
+  font-size: 40px;
+  color: white;
+  padding: 20px;
 }
 
 
