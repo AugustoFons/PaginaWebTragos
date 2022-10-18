@@ -20,11 +20,12 @@
       <div class="containerCss">
         <div class="menu-buscador-logo">
           <div class="menuResponsive">
-            <img class="logo" src="./img/logo.png" alt="" />
+            <a href="#">            <img class="logo" src="./img/logo.png" alt=""/>
+            </a>
             <nav id="mostrar" class="menu">
-              <a href="#">Inicio</a>
-              <a href="#">Nosotros</a>
-              <a href="#">Contacto</a>
+              <a href="#catalogo">Catalogo</a>
+              <a href="#nosotros">Nosotros</a>
+              <a href="#contacto">Contacto</a>
             </nav>
           </div>
 
@@ -38,9 +39,9 @@
           </div>
         </div>
         <nav id="noMostrar774px" class="menu">
-          <a href="#">Inicio</a>
-          <a href="#">Nosotros</a>
-          <a href="#">Contacto</a>
+          <a href="#catalogo">Catalogo</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </div>
       <nav>
@@ -73,7 +74,7 @@
       </div>
     </main>
 
-    <div class="about">
+    <div id="nosotros" class="about">
       <h2 class="subtitle">¿Quienes somos?</h2>
       <p>Somos el sitio web más completo en variedades de tragos, recomendaciones y mucho más.</p>
       <p>Navega por todas nuestras categorias y guardate los tragos que mas te gusten.</p>
@@ -85,11 +86,25 @@
     </div>
     </div>
 
-    <a href="logo"><img src="./img/arriba.png " class="upBtn" id="upBtn" alt="ir arriba"></a>
+    <a href="#"><img src="./img/arriba.png " class="upBtn" id="upBtn" alt="ir arriba"></a>
+
+    <div id="app">
+
+      <div id="catalogo" class="containerTragos">
+
+          <div v-for="elemento in drinks" class="cardCss">
+            <h3>{{elemento.strDrink}}</h3>
+              <img class="tragoFoto" :src="elemento.strDrinkThumb" alt="">
+              <a href="#" class="myButton">Mostrar</a>
+          </div>
+
+      </div>
+
+  </div>
 
 <!-------- FIN PARTE DE NICO -------->
 
-    <section class="form">
+    <section id="contacto" class="form">
       <h3 class="tituloFormulario">Contactenos desde el formulario</h3>
       <div class="container">
         <div class="row g-3">
@@ -156,6 +171,11 @@
       </div>
     </footer>
 
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+<!-- Script bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

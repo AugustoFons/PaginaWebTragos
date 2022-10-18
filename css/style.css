@@ -47,6 +47,7 @@ body {
 
 .logo {
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .menu-buscador {
@@ -325,6 +326,61 @@ main {
   }
 }
 
+
+/* API */
+
+.containerTragos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 30px;
+  row-gap: 50px;
+  padding: 40px;
+}
+
+.tragoFoto {
+  width: 300px;
+  height: 250px;
+}
+
+.myButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:0px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#666566;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+  width: 100%;
+  text-align: center;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.cardCss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardCss h3 {
+  color: white;
+}
+
+
 /* *************** FORMULARIO ***************  */
 .form {
   height: 575px;
@@ -401,7 +457,7 @@ main {
 
 /* RESPONSIVE */
 
-@media (max-width:861px) {
+@media (max-width:896px) {
   .containerCss {
     max-width: 100%;
     display: flex;
@@ -411,7 +467,7 @@ main {
   }
 }
 
-@media (max-width:774px) {
+@media (max-width:797px) {
   .header {
     background-color: rgba(0, 0, 0,0.6);}
 
@@ -444,6 +500,28 @@ main {
     align-items: flex-start;
     row-gap: 20px;
     width: 100%;
+  }
+
+
+  
+  .categorias li a {
+      padding: 20px;
+      color: #c7c7c7;
+      border-left: 5px solid transparent;
+      transition: all 400ms ease;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 2px;
+  }
+
+  
+  .categorias label {
+    position: absolute;
+    left: 315px;
+    top: 175px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
   }
 
   .banner {
