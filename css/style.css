@@ -378,7 +378,26 @@ main {
 
 .cardCss h3 {
   color: white;
+} 
+
+.indice {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
+
+.indice p, .indice a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 10px;
+}
+
+/* .indice a::after {
+  content: "|";
+  cursor:auto;
+} */
 
 
 /* *************** FORMULARIO ***************  */
