@@ -88,22 +88,27 @@
     <a href="#"><img src="./img/arriba.png " class="upBtn" id="upBtn" alt="ir arriba"></a>
 
     <div id="app">
-
       <div id="catalogo" class="containerTragos">
 
-          <div v-for="elemento in drinks" class="cardCss">
+        <div v-for="elemento in drinks" class="cardCss">
             <h3>{{elemento.strDrink}}</h3>
               <img id="1" class="tragoFoto" :src="elemento.strDrinkThumb" alt="">
-              <a href="#" class="myButton">Mostrar</a>
+              <input type="checkbox" id="view">
+              <label class="icono-position" for="view"><a class="myButton">Mostrar</a></label>
+          <div class="prep">
+            <label class="close" for="view">✖️</label> 
+            <p><h1>PREPARACION:</h1> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat nostrum corrupti consequuntur praesentium fuga, molestiae, ea rem iure excepturi cumque illum sint sed blanditiis eligendi a deserunt delectus. Quia, maxime?</p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi impedit consectetur, qui perspiciatis aut, at ut ullam, ex debitis error. Placeat voluptate fugit esse deleniti perspiciatis, harum tenetur iste!
           </div>
+        </div>
 
       </div>
+    </div>
+
 
   <div class="indice">
-    <p><a href="">A</a>|</p>
-  
-    <p><a href="">B</a>|</p>
-    <p><a href="">C</a>|</p>
+    <p><a href="#catalogo">A</a>|</p>
+    <p><a href="./pages/index-B.html#catalogo">B</a>|</p>
+    <p><a href="./pages/index-C.html#catalogo">C</a>|</p>
     <p><a href="">D</a>|</p>
     <p><a href="">E</a>|</p>
     <p><a href="">F</a>|</p>
@@ -202,7 +207,7 @@
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/tragos-letra-A.js"></script>
 <!-- Script bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

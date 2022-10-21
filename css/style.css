@@ -17,10 +17,9 @@ body {
 /* *************** HEADER ***************  */
 .header {
   width: 100%;
-  min-height: 20%;
+  min-height: max-content;
   background-color: rgba(0, 0, 0,0.6);
   padding-top: 10px;
-  padding-bottom: 10px;
   position: fixed;
   z-index: 10;
   margin-bottom: 50px;
@@ -46,6 +45,8 @@ body {
 }
 
 .logo {
+  width: 85px;
+  height: auto;
   margin-left: 30px;
   cursor: pointer;
 }
@@ -89,8 +90,12 @@ input.buscador {
   transition: all 1s;
 }
 
+  
 input.buscador:focus {
   width: 300px;
+  background-color: white;
+  color: #000;
+  letter-spacing: 1.5px;
 }
 
 /* *************** NAVEGADOR ***************  */
@@ -160,7 +165,7 @@ main {
   width: 100%;
   height: 750px;
   animation: slide 16s infinite alternate ease-in-out;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .banner .image {
@@ -338,6 +343,16 @@ main {
   padding: 40px;
 }
 
+.cardCss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardCss h3 {
+  color: white;
+} 
+
 .tragoFoto {
   width: 300px;
   height: 250px;
@@ -355,7 +370,7 @@ main {
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:6px 121px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
   width: 100%;
@@ -370,21 +385,47 @@ main {
 	top:1px;
 }
 
-.cardCss {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#view {
+  visibility: hidden;
+  display: none;
 }
 
-.cardCss h3 {
-  color: white;
-} 
+.prep { 
+  max-width: max-content;
+  height: 400px;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  display: none;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.close:hover {
+  color: #666566;
+}
+
+
+#view:checked ~ .prep {
+display: block;
+position: fixed;
+top: 25%;
+left: 25%;
+width: 50%;
+z-index: 15;
+}
 
 .indice {
   width: 100%;
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .indice p, .indice a {
@@ -394,10 +435,9 @@ main {
   letter-spacing: 10px;
 }
 
-/* .indice a::after {
-  content: "|";
-  cursor:auto;
-} */
+.indice a:hover {
+  color:#666566;
+}
 
 
 /* *************** FORMULARIO ***************  */
@@ -488,7 +528,9 @@ main {
 
 @media (max-width:797px) {
   .header {
-    background-color: rgba(0, 0, 0,0.6);}
+    background-color: rgba(0, 0, 0,0.6);
+    padding-bottom: 5px;
+  }
 
   #mostrar {
     display: flex;
@@ -504,7 +546,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  
+    
   }
 
   .menuResponsive{
@@ -514,15 +556,26 @@ main {
   }
 
   .containerCss .menu-buscador-logo {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 20px;
+    row-gap: 5px;
     width: 100%;
   }
 
+  input.buscador {
+    padding: 2px 5px 5px 32px;
+    outline: none;
+    font-size: 18px;
+    border: 2px Solid #ffffff;
+    border-radius: 100px;
+    color: rgb(173, 169, 169);
+    background: url(../img/search-icon.png) no-repeat 7px center;
+    width: 250px;
+    transition: all 1s;
+  }
 
   
+
   .categorias li a {
       padding: 20px;
       color: #c7c7c7;
@@ -547,7 +600,8 @@ main {
     width: 100%;
     height: 750px;
     animation: slide 16s infinite alternate ease-in-out;
-    margin-top: 180px;
+    margin-top: 153px;
   }
 
 }
+
