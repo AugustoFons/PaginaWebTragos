@@ -95,9 +95,9 @@
               <img id="1" class="tragoFoto" :src="elemento.strDrinkThumb" alt="">
               <input type="checkbox" id="view">
               <label class="icono-position" for="view"><a class="myButton">Mostrar</a></label>
-          <div class="prep">
+          <div v-for="elemento in drinks" class="prep">
             <label class="close" for="view">✖️</label> 
-            <p><h1>PREPARACION:</h1> <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat nostrum corrupti consequuntur praesentium fuga, molestiae, ea rem iure excepturi cumque illum sint sed blanditiis eligendi a deserunt delectus. Quia, maxime?</p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi impedit consectetur, qui perspiciatis aut, at ut ullam, ex debitis error. Placeat voluptate fugit esse deleniti perspiciatis, harum tenetur iste!
+            <p><h1>PREPARACION:</h1><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, laboriosam excepturi mollitia iste dolores eaque molestias ipsa debitis recusandae dolorum sint ab officiis vitae facere architecto harum asperiores aliquam! Soluta! <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut amet facere, at iure ratione ea veniam voluptates ab dolore minus saepe consequuntur? Necessitatibus ducimus accusantium quis suscipit placeat minima odit!</p>
           </div>
         </div>
 
@@ -189,7 +189,7 @@
             </div>
 
             <div class="d-grid g-3">
-              <button class="btn btn-primary" type="button">Enviar</button>
+              <button class="btn btn-primary colorBtn" type="button">Enviar</button>
             </div>
           </form>
         </div>

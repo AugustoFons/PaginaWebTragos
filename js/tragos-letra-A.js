@@ -6,14 +6,18 @@
     createApp({
         data() {
             return {
-            url1: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a',
+            urlA :'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a',
             drinks: []
             }
+
         },
 
         methods: {
-            fetchData(url1) {
-                fetch(url1)
+
+
+
+            fetchData(urlA) {
+                fetch(urlA)
                 .then(response => response.json())
                 .then( data => { 
                     this.drinks = data.drinks
@@ -26,7 +30,7 @@
         },
 
             created() {
-                this.fetchData(this.url1)
+                this.fetchData(this.urlA)
             }
 
     }).mount('#app')

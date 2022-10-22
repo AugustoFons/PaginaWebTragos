@@ -8,9 +8,6 @@
 body {
   background: rgb(0, 0, 0);
   width: 100%;
-/*   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; */
   font-family: 'Cantora One'
 }
 
@@ -22,7 +19,10 @@ body {
   padding-top: 10px;
   position: fixed;
   z-index: 10;
-  margin-bottom: 50px;
+  margin-bottom: 50px; 
+  background-repeat: no-repeat;
+
+
 }
 .containerCss {
   max-width: 90%;
@@ -158,6 +158,7 @@ main {
   display: flex;
   min-width: 100%;
   overflow: hidden;
+  background-size: contain;
 
 }
 
@@ -189,18 +190,6 @@ main {
 
 }
 
-.title_main {
-  
-  color: #000;
-  text-align: center;
-  font-size: 30px; 
-}
-
-.text_main {
- color: #000;
- text-align: center;
- font-size: 25px;
-}
 
 @keyframes slide {
   0% {margin-left: 0%;}
@@ -237,6 +226,7 @@ main {
   height: auto;
   background-color: #000;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
 }
 
 @keyframes text-focus-in {
@@ -354,7 +344,7 @@ main {
 } 
 
 .tragoFoto {
-  width: 300px;
+  width: 299px;
   height: 250px;
 }
 
@@ -376,7 +366,7 @@ main {
   width: 100%;
   text-align: center;
 }
-.myButton:hover {
+.myButton:hover, .colorBtn:hover{
 	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
 	background-color:#ffab23;
 }
@@ -443,7 +433,7 @@ z-index: 15;
 /* *************** FORMULARIO ***************  */
 .form {
   height: 575px;
-  background-image: url(../img/fondoFormulario01.jpg);
+  background-image: url(../img/black-glitch-effect-digital-noise-texture-background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -458,6 +448,7 @@ z-index: 15;
 .tituloFormulario {
   text-align: center;
   color: white;
+  padding: 10px;
 }
 
 .container {
@@ -492,6 +483,18 @@ z-index: 15;
 
 .submit {
   border-width: 100px;
+}
+
+.colorBtn {
+  background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color:#ffec64;
+	border-radius:0px;
+	border:1px solid #ffaa22;
+	color:#666566;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-shadow:0px 1px 0px #ffee66;
 }
 
 /* *************** FOOTER ***************  */
