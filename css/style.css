@@ -20,23 +20,22 @@ body {
   position: fixed;
   z-index: 10;
   margin-bottom: 50px; 
-  background-repeat: no-repeat;
-
-
 }
+
 .containerCss {
   max-width: 90%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
+  
 .containerCss .menu-buscador-logo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
+
 .containerCss .menu-buscador-logo label {
   color: #fff;
   font-size: 25px;
@@ -531,7 +530,6 @@ z-index: 15;
 
 @media (max-width:797px) {
   .header {
-    background-color: rgba(0, 0, 0,0.6);
     padding-bottom: 5px;
   }
 
@@ -545,11 +543,8 @@ z-index: 15;
   }
 
   .containerCss {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-    
   }
 
   .menuResponsive{
@@ -573,29 +568,23 @@ z-index: 15;
     border-radius: 100px;
     color: rgb(173, 169, 169);
     background: url(../img/search-icon.png) no-repeat 7px center;
-    width: 250px;
+    width: 230px;
     transition: all 1s;
   }
 
   
-
   .categorias li a {
       padding: 20px;
       color: #c7c7c7;
-      border-left: 5px solid transparent;
-      transition: all 400ms ease;
       font-size: 17px;
-      font-weight: 600;
+      font-weight: 400;
       letter-spacing: 2px;
   }
 
   
   .categorias label {
-    position: absolute;
     left: 315px;
-    top: 175px;
-    color: #fff;
-    cursor: pointer;
+    top: 155px;
     font-size: 24px;
   }
 
@@ -607,4 +596,64 @@ z-index: 15;
   }
 
 }
+@media (max-width:450px) {
+.containerCss .menu-buscador-logo label {
+  color: #fff;
+  font-size: 23px;
+  margin-left: 10px;
+}
 
+.logo {
+  width: 75px;
+  margin-left: 10px;
+}
+
+.menuResponsive a{
+  width: 100%;
+  font-size: 12px;
+}
+
+.containerCss .menu a {
+  padding: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+}
+
+@media (max-width:350px) {
+  .logo {
+    width: 75px;
+    margin-left: 107px;
+    
+  }
+  .containerCss {
+    width: 100%;
+  }
+  .menuResponsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .containerCss .menu-buscador-logo {
+    align-items: center;
+    row-gap: 5px;
+    width: 100%;
+  }
+  .containerCss .menu a {
+    padding: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  input.buscador {
+    padding: 2px 5px 5px 30px;
+    font-size: 16px;
+    width: 210px;
+  }
+  
+  input.buscador:hover {
+    width: 210px;
+  }
+
+}
