@@ -82,7 +82,7 @@
         <div class="about-bottom">
         <div><img width="80px" height="auto" src="../img/tequila.png" alt=""></div>
         <div><h3>¡ Busca y encontra tu trago favorito !</h3></div>
-        <div><img width="80px" height="auto" src="../img/trago-de-tequila.png" alt=""></div>
+        <div id="catalogo"><img width="80px" height="auto" src="../img/trago-de-tequila.png" alt=""></div>
         </div>
     </div>
     </div>
@@ -90,7 +90,7 @@
     <a href="#"><img src="../img/arriba.png " class="upBtn" id="upBtn" alt="ir arriba"></a>
 
     <div id="app">
-        <div id="catalogo" class="containerTragos">
+        <div class="containerTragos">
 
             <div v-for="elemento in drinks" class="cardCss">
                 <h3>{{elemento.strDrink}}</h3>
@@ -143,8 +143,9 @@
         <div class="container">
         <div class="row g-3">
             <!-- g-3 Genera Espacio -->
-            <form action="" class="row g-3">
-            <div class="col-12">
+            <form  id="formulario" class="row g-3" action="https://formspree.io/f/mdojlrbo"
+            method="POST" >
+                <div class="col-12">
                 <label for="tituloInput">Titulo</label>
                 <input
                 type="text"
@@ -190,7 +191,7 @@
             </div>
 
             <div class="d-grid g-3">
-                <button class="btn btn-primary colorBtn" type="button">Enviar</button>
+                <button class="btn btn-primary colorBtn" type="submit">Enviar</button>
             </div>
             </form>
         </div>
@@ -209,6 +210,7 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../js/tragos-letra-B.js"></script>
+    <script src="./js/form.js"></script>
     <!-- Script bootstrap -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

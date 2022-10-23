@@ -89,7 +89,7 @@ input.buscador {
   transition: all 1s;
 }
 
-  
+
 input.buscador:focus {
   width: 300px;
   background-color: white;
@@ -184,11 +184,6 @@ main {
   height:750px;
 }
 
-.description_banner {
-  background-color: rgba(255, 255, 255, 0.2);
-
-}
-
 
 @keyframes slide {
   0% {margin-left: 0%;}
@@ -212,9 +207,14 @@ main {
   height: auto;
 }
 
-@keyframes scale-up-hor-left {
-
-}
+.about {
+  letter-spacing: 2px;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  padding-top: 40px;
+  text-align: center;
+  }
 
 .subtitle {
   color:white;
@@ -249,17 +249,6 @@ main {
   }
 }
 
-
-.about {
-  letter-spacing: 2px;
-  width: 100%;
-  background-color: #000;
-  text-align: center;
-  padding-top: 40px;
-  text-align: center;
-  }
-
-
 .about p {
   margin: auto;
   color: #fff;
@@ -268,15 +257,13 @@ main {
   width: 100%;
   height: auto;
   letter-spacing: 2px;
-
 }
 
 .about h3{
   font-size: 40px;
   letter-spacing: 3px;
   color: white;
-/*   padding: 20px 20px 60px 20px;
- */}
+}
 
 .about-bottom {
   padding: 40px 40px 60px 40px;
@@ -381,7 +368,7 @@ main {
 
 .prep { 
   max-width: max-content;
-  height: 400px;
+  height: max-content;
   background-color: white;
   color: #000;
   text-align: center;
