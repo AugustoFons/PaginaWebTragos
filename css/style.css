@@ -101,12 +101,16 @@ input.buscador:focus {
 #btn-menu {
   display: none;
 }
+
 .container-menu {
   display: none;
 }
 
 #btn-menu:checked ~ .container-menu {
   display: flex;
+  height: max-content;
+  width: 350px;
+  overflow-block:scroll;
 }
 
 .categorias {
@@ -119,7 +123,7 @@ input.buscador:focus {
 .categorias li a {
     display: block;
 		text-decoration: none;
-		padding: 20px;
+		padding: 7%;
 		color: #c7c7c7;
 		border-left: 5px solid transparent;
 		transition: all 400ms ease;
@@ -367,16 +371,20 @@ main {
 }
 
 .prep { 
-  max-width: max-content;
-  height: max-content;
   background-color: white;
   color: #000;
   text-align: center;
   padding: 15px;
   display: none;
+  overflow: scroll;
+}
+
+.prep h1 {
+  padding-top: 20px;
 }
 
 .close {
+  position: fixed;
   cursor: pointer;
   font-size: 24px;
   font-weight: bolder;
@@ -387,14 +395,16 @@ main {
 }
 
 
-#view:checked ~ .prep {
+#view:checked ~ .prep{
 display: block;
 position: fixed;
 top: 25%;
-left: 25%;
-width: 50%;
+left: 10%;
+width: 80%;
+height: 400px;
 z-index: 15;
 }
+
 
 .indice {
   width: 100%;
@@ -424,12 +434,6 @@ z-index: 15;
   background-position: center center;
   background-size: cover;
 }
-/*
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .tituloFormulario {
   text-align: center;
@@ -505,6 +509,16 @@ z-index: 15;
 
 /* RESPONSIVE */
 
+@media (max-width:1037px) {
+  .containerTragos {
+    justify-content: space-evenly;
+    column-gap: 30px;
+    row-gap: 50px;
+    padding: 40px;
+  }
+}
+
+
 @media (max-width:896px) {
   .containerCss {
     max-width: 100%;
@@ -561,7 +575,7 @@ z-index: 15;
 
   
   .categorias li a {
-      padding: 20px;
+      padding: 7%;
       color: #c7c7c7;
       font-size: 17px;
       font-weight: 400;
@@ -581,6 +595,16 @@ z-index: 15;
     animation: slide 16s infinite alternate ease-in-out;
     margin-top: 153px;
   }
+
+  #view:checked ~ .prep{
+    left: 5%;
+    width: 90%;
+    height: 350px;
+    }
+
+    .prep h1 {
+      font-size: 28px;
+    }
 
 }
 @media (max-width:450px) {
